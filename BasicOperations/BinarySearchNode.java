@@ -124,21 +124,44 @@ public class BinarySearchNode {
 		return node.parent.right==node;
 	}
 	
-	/** Prints a top-bottom DFS view of the tree (left first)
+	/** Returns whether the given tree is balances
 	 * @param root
+	 * @return True if balanced, else False
 	 */
-	public static void displayTreeDFS(BinarySearchNode root) {
-		System.out.print(root.val+" ");
-		if(root.left!=null&&root.right!=null){
-			displayTreeDFS(root.left);
-			displayTreeDFS(root.right);
+	public static boolean isTreeBalanced(BinarySearchNode root) {
+		if(root.left!=null&&root.right!=null&&root.val<root.right.val&&root.val>root.left.val){
+			return isTreeBalanced(root.left)&&isTreeBalanced(root.right);
 		}
-		else if(root.left!=null) {
-			displayTreeDFS(root.left);
+		else if(root.left!=null&&root.val>root.left.val) {
+			return isTreeBalanced(root.left);
 		}
-		else if(root.right!=null) {
-			displayTreeDFS(root.right);
+		else if(root.right!=null&&root.val<root.right.val) {
+			return isTreeBalanced(root.right);
+		}
+		else if(root.left==null&&root.right==null){
+			return true;
+		}
+		else {
+			return false;
 		}
 	}
 	
+	/** Returns the height of the tree (also called level) assuming root is height 1
+	 * @param root
+	 * @return height
+	 */
+	public static int getTreeHeight(BinarySearchNode root) {
+		if(root.left!=null&&root.right!=null){
+			return 1+Math.max(getTreeHeight(root.left), getTreeHeight(root.right));
+		}
+		else if(root.left!=null) {
+			return 1+getTreeHeight(root.left);
+		}
+		else if(root.right!=null) {
+			return 1+getTreeHeight(root.right);
+		}
+		else {
+			return 1;
+		}
+	}
 }

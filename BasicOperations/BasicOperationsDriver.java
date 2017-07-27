@@ -1,7 +1,5 @@
 package BasicOperations;
 
-import BasicOperations.BinarySearchNode;
-
 class BasicOperationsDriver {
 	public static void main(String[] args) {
 		BinarySearchNode root = new BinarySearchNode(null, 10);
@@ -17,10 +15,12 @@ class BasicOperationsDriver {
 		BinarySearchNode.addNode(root, 19);
 		BinarySearchNode.addNode(root, 18);
 		BinarySearchNode.addNode(root, 20);
-		BinarySearchNode.displayTreeDFS(root);
+		BSTViews.displayTreeDFS(root);
 		BinarySearchNode nodeToRemove = BinarySearchNode.searchNode(root, 16);
-		System.out.println(nodeToRemove.left.val+" "+nodeToRemove.right.val);
+		System.out.println("\nRemoval node details "+nodeToRemove.left.val+" "+nodeToRemove.right.val);
 		BinarySearchNode.removeNode(nodeToRemove);
-		BinarySearchNode.displayTreeDFS(root);
+		BSTViews.displayTreeDFS(root);
+		System.out.println("\nHeight is "+BinarySearchNode.getTreeHeight(root));
+		BSTViews.displayTreeBFS(root);
 	}
 }
