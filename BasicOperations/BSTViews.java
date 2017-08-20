@@ -74,7 +74,7 @@ public class BSTViews {
 	 * @param root
 	 */
 	public static void displayTreeBFS(BinarySearchNode root) {
-		System.out.println("\nConverting to Array");
+		System.out.println("\nBFS View...");
 		int[] bstArr = BSTViews.BSTToArray(root, BinarySearchNode.getTreeHeight(root));
 		for(int i=0; i<bstArr.length; i++) {
 			System.out.print(bstArr[i]+" ");
