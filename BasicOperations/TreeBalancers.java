@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class TreeBalancers {
 	/** Driver method to height-balance a BST. It initializes a few required variables and then calls balanceSubArray
+	 * Executes in O(n)
 	 * @param root
 	 * @return root of a new height-balanced tree guaranteed to have minimum height
 	 */
@@ -13,6 +14,7 @@ public class TreeBalancers {
 	}
 	
 	/** Arranges an array of size n into a BST of height O(log n)
+	 * Executes in O(n)
 	 * @param inOrder - inOrder traversal list of the tree
 	 * @param lo - start index of the subarray to be considered 
 	 * @param hi - end index of the subarray to be considered

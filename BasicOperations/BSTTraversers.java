@@ -4,6 +4,10 @@ import java.util.ArrayList;
 
 public class BSTTraversers {
 
+	/** In-order traversal is Root-Left-RIght. This also returns non-descending order of tree node values. Executes in O(n)
+	 * @param root
+	 * @return ArrayList of in-ordered values
+	 */
 	public static ArrayList<Integer> inOrderTraversal(BinarySearchNode root){
 		ArrayList<Integer> inOrder = new ArrayList<Integer>();
 		if(root!=null) {
@@ -17,7 +21,10 @@ public class BSTTraversers {
 		}
 		return inOrder;
 	}
-	
+	/** Pre-order traversal is Root-Left-Right. Executes in O(n).
+	 * @param root
+	 * @return ArrayList of pre-ordered values
+	 */
 	public static ArrayList<Integer> preOrderTraversal(BinarySearchNode root){
 		ArrayList<Integer> preOrder = new ArrayList<Integer>();
 		if(root!=null) {
@@ -31,7 +38,10 @@ public class BSTTraversers {
 		}
 		return preOrder;
 	}
-	
+	/** Post-order traversal is Left-Right-Root. Executes in O(n)
+	 * @param root
+	 * @return ArrayList of post-ordered values
+	 */
 	public static ArrayList<Integer> postOrderTraversal(BinarySearchNode root){
 		ArrayList<Integer> postOrder = new ArrayList<Integer>();
 		if(root!=null) {

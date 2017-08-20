@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class BSTViews {
 	
 	/** Prints a top-bottom DFS view of the tree (left first)
+	 * Executes in O(n)
 	 * @param root
 	 */
 	public static void displayTreeDFS(BinarySearchNode root) {
@@ -21,7 +22,7 @@ public class BSTViews {
 		}
 	}
 	
-	/** Converts a BST into a one-dimensional array
+	/** Converts a BST into a one-dimensional array in BFS order
 	 * @param root
 	 * @param nLevels
 	 * @return array containing all the elements in BFS order
@@ -43,7 +44,8 @@ public class BSTViews {
 		return bstArr;
 	}
 	
-	/** Helper function to BSTTOArray
+	/** Helper function to BSTTOArray. Recursively calls itself to fill values from BST to array in BFS order
+	 * Executes in O(n)
 	 * @param node
 	 * @param parentId
 	 * @param bstArr

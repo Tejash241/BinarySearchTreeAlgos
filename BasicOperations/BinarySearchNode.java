@@ -14,6 +14,7 @@ public class BinarySearchNode {
 	}
 	
 	/** Adds a node to the Tree (assumes val is unique within the tree)
+	 * Executes in O(1)
 	 * @param root
 	 * @param value of the new node
 	 */
@@ -39,6 +40,7 @@ public class BinarySearchNode {
 		
 	}
 	/** Removes the node in the BST with a given val
+	 * Executes in O(1)
 	 * @param root
 	 * @param val
 	 */
@@ -76,6 +78,7 @@ public class BinarySearchNode {
 	}
 	
 	/** Returns the node in the BST with the given value
+	 * Executes in O(log n) time
 	 * @param root
 	 * @param value to search for
 	 * @return A BinarySearchNode with given value
@@ -93,6 +96,7 @@ public class BinarySearchNode {
 	}
 	
 	/** Returns the successor of a given node. A successor is a node with the least value that greater than the given node
+	 * Executes in O(log n) time
 	 * @param node
 	 * @return successor
 	 */
@@ -125,6 +129,7 @@ public class BinarySearchNode {
 	}
 	
 	/** Returns whether the given tree is balances
+	 * Executes in O(log n) time
 	 * @param root
 	 * @return True if balanced, else False
 	 */
@@ -147,6 +152,7 @@ public class BinarySearchNode {
 	}
 	
 	/** Returns the height of the tree (also called level) assuming root is height 1
+	 * Executes in O(n) time
 	 * @param root
 	 * @return height
 	 */
